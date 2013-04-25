@@ -1,3 +1,4 @@
+#include "crc32.h"
 #include "md5.h"
 #include "sha1.h"
 #include <stdio.h>
@@ -28,5 +29,9 @@ int main(int argc, char **argv)
         printf("%02x", sha1_result[i]);
     }
     printf("\n");
+
+    uint32_t crc = 0;
+    crc = CRC32(0, src, sizeof(src)-1);
+    printf("CRC32:%08x\n", crc);
     return 0;
 }

@@ -10,7 +10,7 @@ INCD :=
 LIBD :=
 
 TARGET := test
-OBJS   := main.o md5.o sha1.o
+OBJS   := main.o md5.o sha1.o crc32.o
 
 .PHONY: all clean
 all: $(TARGET)
